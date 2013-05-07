@@ -9,8 +9,8 @@ pygments: true
 # Themes are encouraged to use these universal variables 
 # so be sure to set them if your theme uses them.
 #
-title : Jinliang Github Blog
-tagline: Site Tagline
+title : Jinliang Blog
+tagline:
 author :
   name : Jinliang Zhu
   email : zhujinlianghust@gmail.com
