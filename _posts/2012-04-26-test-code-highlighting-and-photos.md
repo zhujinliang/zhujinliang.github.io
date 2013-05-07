@@ -2,12 +2,12 @@
 layout: post
 title: "Test Code Highlighting and Photos"
 description: ""
-category: "essays"
+category: "test"
 tags: [jekyll]
 ---
 {% include JB/setup %}
 
-首先测试代码高亮。对Ruby不了解，奇怪的是代码高亮需要Pygments来支持。
+首先测试代码高亮。
 
 {% highlight javascript %}
 /**
