@@ -9,11 +9,11 @@ pygments: true
 # Themes are encouraged to use these universal variables 
 # so be sure to set them if your theme uses them.
 #
-title : Jinliang Blog
+title : Jinliang's Blog       #'
 tagline:
 author :
   name : Jinliang Zhu
-  email : zhujinlianghust#gmail.com
+  email : zhujinlianghust(at)gmail.com
   github : zhujinliang
 
 # The production_url is only used when full-domain names are needed
