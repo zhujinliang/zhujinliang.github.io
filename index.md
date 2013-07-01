@@ -6,13 +6,11 @@ tagline: Supporting tagline
 {% include JB/setup %}
 
 
-## Update Author Attributes
+## About Me
 
 
     
-## Sample Posts
-
-
+## Posts
 
 <ul class="posts">
   {% for post in site.posts %}
