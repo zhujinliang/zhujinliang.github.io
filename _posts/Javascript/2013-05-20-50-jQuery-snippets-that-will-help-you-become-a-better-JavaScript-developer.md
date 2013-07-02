@@ -458,3 +458,9 @@ tags: [Javascript, jQuery]
     }
     //用法　
     $('p').replaceUrl();
+
+
+
+
+
+*PS:*最后附上[jQuery1.9 API中文文档](http://www.css88.com/jqapi-1.9/)方便查询。
