@@ -2,8 +2,8 @@
 layout: post
 title: "Best JavaScript Books for Beginners"
 description: "Best JavaScript Books for Beginners"
-category: "development"
-tags: [Javascript, Books]
+category: "JavaScript"
+tags: [JavaScript, Books]
 ---
 {% include JB/setup %}
 

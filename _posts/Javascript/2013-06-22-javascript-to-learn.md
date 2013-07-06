@@ -2,8 +2,8 @@
 layout: post
 title: "JavaScript To Learn"
 description: "JavaScript To Learn"
-category: "Javascript"
-tags: [Javascript]
+category: "JavaScript"
+tags: [JavaScript]
 ---
 {% include JB/setup %}
 

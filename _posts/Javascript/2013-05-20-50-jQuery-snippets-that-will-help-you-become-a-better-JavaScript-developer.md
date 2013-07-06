@@ -3,7 +3,7 @@ layout: post
 title: "50 jQuery Snippets That Will Help You Become A Better JavaScript Developer"
 description: "50 jQuery Snippets That Will Help You Become A Better JavaScript Developer"
 category: "JavaScript"
-tags: [Javascript, jQuery]
+tags: [JavaScript, jQuery]
 ---
 {% include JB/setup %}
 
