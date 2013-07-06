@@ -9,26 +9,25 @@ tags: [Python, Django]
 
 ## 介绍
 
-Django-debug-toolbar 在调试Django的程序时可以显示各种关于当前request/response的调试信息，以及模版渲染，SQL语句查询等信息。
+`Django-debug-toolbar`在调试Django的程序时可以显示各种关于当前request/response的调试信息，以及模版渲染，SQL语句查询等信息。
 
 当前可以在调试面板里显示的信息如下：
 
-* Django版本信息
+* Django版本信息  
 
+* `request time`请求时间  
 
-* 请求时间
-
-* settings.py文件中的设置信息
+* `settings.py`文件中的设置信息
 
 * GET/POST/cookie/session变量的信息
 
-* 使用的template和context，以及template的路径
+* 使用的`template`和`context`，以及template的路径
 
-* SQL查询的信息，包括查询语句数量，时间等信息。
+* `SQL`查询的信息，包括查询语句数量，时间等信息。  
 
-* 信号列表
+* `signal`信号列表  
 
-* 日志信息
+* `log`日志信息  
 
 就我使用体会，感觉还是非常方便的，大大便利了Django开发过程中的调试，能够帮助开发者及时找到问题所在。
 
@@ -40,12 +39,11 @@ Django-debug-toolbar 在调试Django的程序时可以显示各种关于当前re
 
 ## 安装
 
-* 利用pip安装
+* 利用`pip`安装
 
 	pip install django-debug-toolbar
 
-
-* 下在源码，解压安装
+* [下载](https://pypi.python.org/pypi/django-debug-toolbar)Debug-toolbar`源码`，解压到解压目录下使用以下命令安装
 
 	sudo python setup.py install
 
@@ -54,7 +52,7 @@ Django-debug-toolbar 在调试Django的程序时可以显示各种关于当前re
 
 在settings.py文件（建议添加在本地的settings.py文件或者开发使用的settings.py文件）中添加如下配置信息：
 
-* 安装debug_toolbar的app，在INSTALLED_APPS中增加如下行：
+* 安装debug_toolbar的app，在`INSTALLED_APPS`中增加如下行：
 
 {% highlight python %}
 
@@ -64,7 +62,7 @@ INSTALLED_APPS += (
 
 {% endhighlight %}
 
-* 安装debug_toolbar的中间件，在MIDDLEWARE_CLASSES中增加如下行：
+* 安装debug_toolbar的中间件，在`MIDDLEWARE_CLASSES`中增加如下行：
 
 {% highlight python %}
 
@@ -75,7 +73,7 @@ MIDDLEWARE_CLASSES += (
 
 *Note*: 如果你的站点启用了压缩中间件：GZipMiddleware，则必须将这一行放到它的后面。
 
-* 增加INTERNAL_IPS设置，添加如下行：
+* 增加`INTERNAL_IPS`设置，添加如下行：
 
 {% highlight python %}
 
@@ -83,7 +81,7 @@ INTERNAL_IPS = ('127.0.0.1', )
 
 {% endhighlight %}
 
-* 设置模板，添加debug_toolbar的模板目录到TEMPLATE_DIRS：
+* 设置模板，添加debug_toolbar的模板目录到`TEMPLATE_DIRS`：
 
 {% highlight python %}
 
@@ -93,7 +91,8 @@ TEMPLATE_DIRS += (
 
 {% endhighlight %}
 
-* 右侧显示的项目是可以定制的，增加如下配置项，将不需要的项目注释掉即可：
+
+*  右侧panel显示的项目是可以定制的，增加如下配置项，将不需要的项目注释掉即可：
 
 {% highlight python %}
 
@@ -114,19 +113,27 @@ DEBUG_TOOLBAR_PANELS = (
 {% endhighlight %}
 
 
-还可以有更灵活的配置，请点击[这里](https://pypi.python.org/pypi/django-debug-toolbar)。
+*Note*:还可以有更灵活的配置，请点击[这里](https://pypi.python.org/pypi/django-debug-toolbar)。
+
 
 ## 使用方法
+
+* `DJDT`浮动图标
 
 运行Django应用，便可以在浏览器的右上角看到一个浮动的图标，如下图所示：
 
 ![浮动图标]({{ IMAGE_PATH }}/django-debug-toolbar/toolbar-hide.png)
 
+
+* Debug-toolbar调试面板
+
 点击图标之后，会展开整个调试面板，可以选择相关的信息进行查看，如下图所示：
 
 ![调试面板]({{ IMAGE_PATH }}/django-debug-toolbar/toolbar-expand.png)
 
-以template信息为例，点击Template，会显示此Web页面所用到的模版，以及模版中的context，如下图所示：
+* 以`template`信息为例
+
+点击Template，会显示此Web页面所用到的模版，以及模版中的context，如下图所示：
 
 ![template信息]({{ IMAGE_PATH }}/django-debug-toolbar/template-detail.png)
 
