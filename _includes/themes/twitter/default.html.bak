@@ -49,8 +49,30 @@
 
       <footer>
       <p>&copy; <a href="mailto:zhujinlianghust@gmail.com">{{ site.author.name }}</a> 2013 with help from  <a href="http://github.com" target="_blank">Github</a> and <a href="http://jekyllbootstrap.com" target="_blank" title="The Definitive Jekyll Blogging Framework">Jekyll Bootstrap</a></p>
-      <!-- CNZZ analytic -->
-      <script src="http://s17.cnzz.com/stat.php?id=5520247&web_id=5520247&show=pic2" language="JavaScript"></script>
+
+        <!-- Piwik -->
+        <script type="text/javascript">
+          var _paq = _paq || [];
+          _paq.push(["setDocumentTitle", document.domain + "/" + document.title]);
+          _paq.push(["setCookieDomain", "*.zhujinliang.tk"]);
+          _paq.push(["setDomains", ["*.zhujinliang.tk"]]);
+          _paq.push(["trackPageView"]);
+          _paq.push(["enableLinkTracking"]);
+
+          (function() {
+            var u=(("https:" == document.location.protocol) ? "https" : "http") + "://analytics-zhujl.tk/";
+            _paq.push(["setTrackerUrl", u+"piwik.php"]);
+            _paq.push(["setSiteId", "2"]);
+            var d=document, g=d.createElement("script"), s=d.getElementsByTagName("script")[0]; g.type="text/javascript";
+            g.defer=true; g.async=true; g.src=u+"piwik.js"; s.parentNode.insertBefore(g,s);
+          })();
+        </script>
+        <!-- End Piwik Code -->
+        
+        <!-- Piwik Image Tracker -->
+        <div class="pull-right track-img" style="margin-top: -35px">
+            <a href="https://analytics-zhujl.tk"><img src="{{ IMAGE_PATH }}/activetracking.png" title="Piwik Tracking" /></a>
+        </div>
       </footer>
 
     </div> <!-- /container -->
