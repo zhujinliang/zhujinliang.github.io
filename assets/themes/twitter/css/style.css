@@ -9,7 +9,7 @@ body {
   text-align: center; /* center align it with the container */
 }
 .container {
-  width: 820px; /* downsize our container to make the content feel a bit tighter and more cohesive. NOTE: this removes two full columns from the grid, meaning you only go to 14 columns and not 16. */
+  /* width: 820px;*/ /* downsize our container to make the content feel a bit tighter and more cohesive. NOTE: this removes two full columns from the grid, meaning you only go to 14 columns and not 16. */
 }
 
 /* The white background content wrapper */
@@ -69,3 +69,26 @@ body {
 	color:#FFF;
 }
 	
+/* post content in post page*/
+div.span8 {
+	width: 680px;
+}
+
+/* right sidebar in post page*/
+div.span4 {
+	width: 220px;
+}
+
+.signature {
+	font-size: 20px;
+	color: #9D9D9D;
+	font-style: italic;
+}
+
+.sidebar-title {
+	font-weight: bold;
+	border-radius: 3px 3px 3px 3px;
+	padding: 3px 6px;
+	width: 100%;
+	background-color: #EEEEEE;
+}
