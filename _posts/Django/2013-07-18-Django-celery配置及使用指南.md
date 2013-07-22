@@ -88,7 +88,7 @@ CELERYBEAT_SCHEDULER = 'djcelery.schedulers.DatabaseScheduler'
 
 2. 创建一个任务
 
-    进入Django的admin后台，进入`Djcelery`栏目，一共有四个选项：
+进入Django的admin后台，进入`Djcelery`栏目，一共有四个选项：
 
 * `Crontabs`
 
