@@ -43,20 +43,20 @@ Django-celery用作异步任务管理非常方便，借助Django的admin后台�
 * 添加djcelery到INSTALLED_APPS
 
 {% highlight python %}
-        INSTALLED_APPS = {
-          ...
-          'djcelery',          # 加入celery
-        }
+INSTALLED_APPS = {
+  ...
+  'djcelery',          # 加入celery
+}
 {% endhighlight %}
 
 
 * 配置Django-celery
 
 {% highlight python %}
-        import djcelery
-        djcelery.setup_loader()
-        BROKER_URL = 'amqp://guest:guest@localhost:5672//'
-        CELERYBEAT_SCHEDULER = 'djcelery.schedulers.DatabaseScheduler'
+import djcelery
+djcelery.setup_loader()
+BROKER_URL = 'amqp://guest:guest@localhost:5672//'
+CELERYBEAT_SCHEDULER = 'djcelery.schedulers.DatabaseScheduler'
 {% endhighlight %}
 
 ## 启动Django-celery
@@ -70,8 +70,9 @@ Django-celery用作异步任务管理非常方便，借助Django的admin后台�
 
     $ ps aux | grep celery
 
-若没有运行结果，则表示Django-celery没有运行，可以在此执行命令运行celery，
-若有运行结果，显示celery的进程号，则表示Django-celery已经运行了。
+若没有运行结果，则表示Django-celery没有运行，可以在此执行上面的运行命令运行celery。
+
+若有运行结果，显示celery的进程号等信息，则表示Django-celery已经运行了。
 
 ## 使用Django-celery
 使用Django-celery可以在admin后台创建一个任务，在指定的时间执行。
@@ -89,23 +90,23 @@ Django-celery用作异步任务管理非常方便，借助Django的admin后台�
 
     进入Django的admin后台，进入`Djcelery`栏目，一共有四个选项：
 
-    * `Crontabs`
+* `Crontabs`
 
-    在此选项中，可以创建定时执行的任务需要的定时时间。
+在此选项中，可以创建定时执行的任务需要的定时时间。
 
-    * `Intervals`
+* `Intervals`
 
-    在此选项中，可以创建间隔执行的任务需要时间间隔。
+在此选项中，可以创建间隔执行的任务需要时间间隔。
 
-    * `Periodic tasks`
+* `Periodic tasks`
 
-    在此选项中，创建一个相应的任务，选择任务，需要定时执行的时间或者时间间隔，并保存。
+在此选项中，创建一个相应的任务，选择任务，需要定时执行的时间或者时间间隔，并保存。
 
-    当然，还有其他一些高级的选项，可以尝试使用。
+当然，还有其他一些高级的选项，可以尝试使用。
 
-    * `Tasks`
+* `Tasks`
 
-    * `Workers`
+* `Workers`
 
 到此，一个任务便创建成功了。不出意外，创建的任务会如期执行，当然，如果创建的没有
 如期执行的，应该依次检查前面的步骤，查看celery是否在运行，创建的task是否报错等等，
