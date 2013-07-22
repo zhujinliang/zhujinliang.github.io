@@ -2,8 +2,8 @@
 layout: post
 title: "Django-debug-toolbar --- an edge tool for Django development"
 description: "Django-debug-toolbar "
-category: "Python"
-tags: [Python, Django]
+category: "Django"
+tags: [Django]
 ---
 {% include JB/setup %}
 
