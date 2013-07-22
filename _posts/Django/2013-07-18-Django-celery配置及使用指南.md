@@ -7,7 +7,7 @@ tags: [Django, Celery]
 ---
 {% include JB/setup %}
 
-# Django-celery配置及使用指南
+## 介绍
 Django-celery用作异步任务管理非常方便，借助Django的admin后台管理，可以管理员可以方便的在后台
 添加和管理定时的任务，而不用通过Shell的crontab来实现，非常的直观，且方便修改。
 
