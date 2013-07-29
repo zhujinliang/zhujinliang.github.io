@@ -36,7 +36,7 @@ Django提供了可用的缓存方案，分别如下：
 从而大大提高读取速度，来减少读取数据库的次数，从而提供动态、数据库驱动网站
 的速度。
 
-`Memcached`官方网站：(http://memcached.org)[http://memcached.org]
+`Memcached`官方网站：[http://memcached.org](http://memcached.org)
 
 ## 安装Memcached
 
@@ -119,7 +119,7 @@ CACHES = {
         'LOCATION': '127.0.0.1:11211',
     }
 }
-{% endhightlight %}
+{% endhighlight %}
 
 **Note:**更多配置信息在Django文档中，请见[这里](https://docs.djangoproject.com/en/1.4/topics/cache/)
 
