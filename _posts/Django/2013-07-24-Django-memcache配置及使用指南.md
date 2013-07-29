@@ -176,13 +176,15 @@ CACHES = {
         django-admin.py shell --settings=pingjia.settings_pb --pythonpath=.
 
     然后测试Django中的对cache的配置是否成功：
-    {% highlight python %}
-    from django.core.cache import cache
-    cache.set('key1', 'test')
-    value = cache.get('key1')
-    print value
-    得到结果test
-    {% endhighlight %}
+{% highlight python %}
+
+from django.core.cache import cache
+cache.set('key1', 'test')
+value = cache.get('key1')
+print value
+得到结果test
+
+{% endhighlight %}
 
 * 在Django中使用memcached
 
@@ -190,16 +192,18 @@ CACHES = {
 
     (1) 缓存数据。
     具体的方法和上面提到的类似，例如：
-    {% highlight python %}
-    from django.core.cache import cache
-    def about(request):
-        if cache.get('key1'):
-            data = cache.get('key1')
-        else:
-            访问数据库，得到data
-            cache.set('data')
-        ...
-    {% endhighlight %}
+{% highlight python %}
+
+from django.core.cache import cache
+def about(request):
+    if cache.get('key1'):
+        data = cache.get('key1')
+    else:
+        访问数据库，得到data
+        cache.set('data')
+    ...
+
+{% endhighlight %}
 
     每次进来，先查看cache中是否存在，若存在，直接获得该值，若不存在，则访问数据库，
     得到数据之后，将其写入到cache之后，以便后续之用。
@@ -210,13 +214,15 @@ CACHES = {
 
     (2)缓存整个页面。
     可以使用Django提供的cache_page装饰函数，例如缓存about页面：
-    {% highlight python %}
-    from django.views.decorators.cache import cache_page
+{% highlight python %}
 
-    @cache_page(60*30)
-    def about(request):
-        ...
-    {% endhighlight %}
+from django.views.decorators.cache import cache_page
+
+@cache_page(60*30)
+def about(request):
+    ...
+
+{% endhighlight %}
     
     只需在view函数前加上cache_page装饰函数便可以该页面，cache_page的参数是缓存时间
     这里设的是60s*30，即30分钟。同时也可以指定使用的缓存，通过cache参数来指定，例如：
