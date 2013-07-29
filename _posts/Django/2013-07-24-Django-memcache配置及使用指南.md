@@ -110,8 +110,7 @@ memcached协议与守护进程通信。这里我们需要用Python实现的Memca
 
 ## 在Django中配置memcached
 
-这里先只做了最简单的配置，具体如下：
-
+最简单的配置，如下：
 {% highlight python %}
 CACHES = {
     'default': {
@@ -120,6 +119,35 @@ CACHES = {
     }
 }
 {% endhighlight %}
+
+目前项目上，采用的是memcached和文件缓存共存的方法，具体配置如下：
+
+{% highlight python %}
+CACHES = {
+    'default': {
+        'BACKEND': 'django.core.cache.backends.memcached.MemcachedCache',
+        'LOCATION': '127.0.0.1:11211',
+        'TIMEOUT': 18000, # 5 hours
+        'OPTIONS': {
+            'MAX_ENTRIES': 1000,
+            'CULL_FREQUENCY': 3,
+        }
+    },
+
+    'file_cache': {
+        'BACKEND': 'django.core.cache.backends.filebased.FileBasedCache',
+        'LOCATION': '/home/wwwcache',
+        'TIMEOUT': 18000, # 5 hours
+        'OPTIONS': {
+            'MAX_ENTRIES': 10000,
+            'CULL_FREQUENCY': 3,
+        }
+    }
+}
+{% endhighlight %}
+
+具体使用时，针对数据（例如需要访问数据库多个表，且需要处理数据）的缓存，可以使用default
+的memcache缓存，而对于整个页面的缓存，则可以使用文件缓存的方式来完成。
 
 **Note:**更多配置信息在Django文档中，请见[这里](https://docs.djangoproject.com/en/1.4/topics/cache/)
 
@@ -189,5 +217,8 @@ CACHES = {
     def about(request):
         ...
     {% endhighlight %}
+    
     只需在view函数前加上cache_page装饰函数便可以该页面，cache_page的参数是缓存时间
-    这里设的是60s*30，即30分钟。
+    这里设的是60s*30，即30分钟。同时也可以指定使用的缓存，通过cache参数来指定，例如：
+    `@cache_page(60*30, cache='file_cache')`则指定使用settings文件中CACHES中的`file_cache`
+    来缓存，若不指定，默认用`default`的来缓存。
