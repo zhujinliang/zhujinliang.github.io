@@ -71,9 +71,19 @@ memcached协议与守护进程通信。这里我们需要用Python实现的Memca
 
 安装`pylibmc`：
 
+* RHEL/Fedora
+
     yum install libmemcached
 
     pip install pylibmc
+
+
+* Ubuntu/Debian
+
+    apt-get  install libmemcached-dev
+
+    pip install pylibmc
+
 
 
 ## 启动memcached
