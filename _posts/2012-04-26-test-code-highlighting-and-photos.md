@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Test Code Highlighting and Photos"
-description: ""
+description: "测试代码高亮, 测试图片显示"
 category: "test"
 tags: [jekyll]
 ---

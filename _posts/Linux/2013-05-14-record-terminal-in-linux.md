@@ -1,7 +1,8 @@
 ---
 layout: post
 title: "Record Terminal In Linux"
-description: "Record terminal in linux"
+description: "Linux下有很多方便好用的工具，当然也不乏屏幕录制软件，但是如果仅仅是录制终端的话，大可不必非得用
+屏幕录制软件不可。介绍两个我自己使用过的录制终端的方法。"
 category: "Linux"
 tags: [Linux]
 ---

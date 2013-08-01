@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Django-debug-toolbar --- an edge tool for Django development"
-description: "Django-debug-toolbar "
+description: "在调试Django的程序时可以显示各种关于当前request/response的调试信息，以及模版渲染，SQL语句查询等信息。"
 category: "Django"
 tags: [Django]
 ---

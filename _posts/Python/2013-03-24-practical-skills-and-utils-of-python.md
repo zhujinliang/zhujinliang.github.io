@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Practical Skills and Utils of Python"
-description: "Python实用技巧和工具"
+description: "收集的一些Python实用技巧和工具。"
 category: "Python"
 tags: [Python]
 ---

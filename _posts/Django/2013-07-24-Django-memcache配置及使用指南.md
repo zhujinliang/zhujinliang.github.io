@@ -1,7 +1,9 @@
 ---
 layout: post
 title: "Django+memcache配置及使用指南"
-description: "Django+memcache配置及使用指南"
+description: "Django提供了一个稳定的缓存系统让你缓存动态页面的结果，这样在接下来有相同的请求就
+可以直接使用缓存中的数据，避免不必要的重复计算。另外Django还提供了不同粒度数据的缓存，
+例如：你可以缓存整个页面，也可以缓存某个部分，甚至缓存整个网站。"
 category: "Django"
 tags: [Django, Memcache]
 ---
