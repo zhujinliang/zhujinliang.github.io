@@ -7,6 +7,7 @@ tags: [DDOS Apache]
 ---
 {% include JB/setup %}
 
+
 前些天,网站访问很慢,有很多httpd的进程，从`Apache`的访问日志来看，有几个IP一直在不断的访问网站，导致服务器的负荷太重，怀疑有攻击或者是有爬虫在爬我们网站，便在网上搜解决办法，提供的主要方案是使用mod_evasive模块。
 
 ## mod_evasive 介绍
@@ -70,12 +71,43 @@ mod_evasive 的官方地址： [http://www.zdziarski.com](http://www.zdziarski.c
 
 * DOSSystemCommand "sudo iptables -A INPUT -s %s -j DROP"：
 
-    IP加入黑名单后执行的系统命令。   
+    IP加入黑名单后执行的系统命令，可以直接将该IP加入防火墙，永久封IP。   
 
-* DOSLogDir "/tmp"：
+* DOSLogDir "/www/wdlinux/httpd-2.2.22/logs/mod_evasive"：
 
-    锁定机制临时目录。   
+    手动创建目录mod_evasive，攻击日志存放目录，注意这个**目录的权限**，是运行apache程序的用户。锁定机制临时目录。   
 
 * DOSWhiteList 127.0.0.1：
 
     防范白名单，不阻止白名单IP。
+
+## mod_evasive测试验证
+
+1）防DDOS的模块安装配置好后，我们要验证是否工作，可以用Apache 自带的`ab`工具，系统默认安装在/usr/sbin目录中；
+   
+        /www/wdlinux/apache/bin/ab -n 1000 -c 50 http://****
+
+**Note：**上面的例子的意思是，要发送数据请求包给指定的网站，总共1000个，每次并发50个；
+
+2）另外一个测试工具就是mod_evasive的解压包的目录中`test.pl`， 修改test.pl IP地址为测试目标网站的IP
+
+        chmod 755 test.pl
+        ./test.pl
+        HTTP/1.1 200 OK
+        HTTP/1.1 200 OK
+        HTTP/1.1 200 OK
+        HTTP/1.1 200 OK
+        HTTP/1.1 200 OK
+        HTTP/1.1 200 OK
+        HTTP/1.1 200 OK
+        HTTP/1.1 403 Forbidden
+        HTTP/1.1 403 Forbidden
+        HTTP/1.1 403 Forbidden
+        HTTP/1.1 403 Forbidden
+        HTTP/1.1 403 Forbidden
+        HTTP/1.1 403 Forbidden
+        HTTP/1.1 403 Forbidden
+        HTTP/1.1 403 Forbidden
+
+你可以到你的`/www/wdlinux/httpd-2.2.22/logs/mod_evasive`目录(该目录由`DOSLogDir`设定)下面发现有日志文件
+类似文件：dos-192.168.12.201 ，192.168.12.201 表示记录了攻击的IP。
