@@ -243,3 +243,29 @@ CACHES = {
     这里设的是60s*30，即30分钟。同时也可以指定使用的缓存，通过cache参数来指定，例如：
     `@cache_page(60*30, cache='file_cache')`则指定使用settings文件中CACHES中的`file_cache`
     来缓存，若不指定，默认用`default`的来缓存。
+
+
+## 查看memcached使用情况
+
+* 使用`telnet`登录
+    
+    telnet 127.0.0.1 11211
+
+登录memcached的端口。
+
+* 使用命令`stats`
+
+    stats
+
+查看memcached的使用情况，如下图：
+
+![memcached的使用情况1]({{ IMAGE_PATH }}/memcache/memcache-usage1.png)
+
+![memcached的使用情况2]({{ IMAGE_PATH }}/memcache/memcache-usage2.png)
+
+具体的每个参数的意思，后面有空再细细加上。
+
+* 退出exit
+
+    Ctrl + ]
+    Ctrl + d
