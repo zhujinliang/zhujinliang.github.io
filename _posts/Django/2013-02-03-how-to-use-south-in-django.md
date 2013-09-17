@@ -45,13 +45,11 @@ South可以作为syncdb的替代，South能够检测对models的更改并同步�
 
 当多人开发项目时，可能另一个人在他自己的数据库上执行了migration，之后又migrate更新到了数据库中，此时会出现migration文件目录下的不一致，此时自己更改了models.py之后，执行migration，产生了migration文件，但当你执行migrate想更新数据库时，会报错，可能的原因是migration文件与数据库中south_migrationhistory的不一致造成的。
 
-解决办法：
+若本地的app目录下有部分migrations文件，则解决办法如下：
 
 1. 查看数据库`south_migrationhistory`表中`migration`字段的值对应的和当前要migrate的app下的migration文件夹下的一致的最后一个文件名的。
 
-2. 删除`south_migrationhistory`表中，在那之后不一致的所有记录，可以使用SQL语句： 
-
-        DELETE FROM south_migrationhistory WHERE id > id_num;
+2. 删除`south_migrationhistory`表中，`migration`字段对应的文件名，在那之后不一致的所有记录。
 
 3. 此时执行migration操作，生成migration文件。
  
@@ -63,6 +61,19 @@ South可以作为syncdb的替代，South能够检测对models的更改并同步�
 
 5. 之后，便可以重新修改models.py文件，然后按一般使用South的方法进行了。
 
-当然为了避免这种情况的发生，最好的办法是，在使用版本控制工具，例如git或svn时，最好不要把migration目录下的文件加入版本库中。
+若本地的app目录下有没有migrations文件（一般migrations文件都是不加入到版本控制中的），则解决办法如下：
+
+1. 为该app生成migration文件，一般会在该app目录下创建migrations文件夹，并有初始文件名为0001_initial.py：
+
+        python manage.py schemamigration --init app_name
+
+2. 删除`south_migrationhistory`表中，`app_name`字段为该app，且`migration`字段对应的文件名不是0001_initial.py的所有记录。
+
+3. 执行如下命令,告诉South，之前的所有migration文件已经应用到数据库中，数据库已经更新了（fake，其实就是欺骗South）。
+
+        python manage.py migrate app_name 0001 --fake
+
+4. 之后，便可以重新修改models.py文件，然后按正常使用South的方法进行了。
+
 
 欢迎指出问题，相互交流学习！
