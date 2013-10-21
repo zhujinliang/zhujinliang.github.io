@@ -110,7 +110,7 @@ memcached协议与守护进程通信。这里我们需要用Python实现的Memca
 
     -P是设置保存Memcache的PID文件，我这里是保存在 /tmp/memcached.pid，方便查看PID
 
-* 查看`memcached`
+* 查看`memcached`：
 
     启动成功后，查看进程状态：
 
@@ -119,6 +119,11 @@ memcached协议与守护进程通信。这里我们需要用Python实现的Memca
     查看11212端口状态：
 
         netstat -ntl
+
+* `memcached`的配置文件路径：
+    
+        /etc/sysconfig/memcached
+
 
 ## 在Django中配置memcached
 
