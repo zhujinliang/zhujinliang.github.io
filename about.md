@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "About Jinlang"
+title: "About Jinliang"
 description: ""
 group: navigation
 ---
