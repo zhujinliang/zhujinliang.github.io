@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "CentOS下软件包管理"
-description: "CentOS下软件包管理, rpm, yum"
+description: "利用rpm和yum对CentOS下软件包进行管理。"
 category: "Linux"
 tags: [Linux, rpm, yum]
 ---
@@ -244,7 +244,9 @@ CentOS自带(yum-*.noarch.rpm)
         mv /etc/yum.repos.d/CentOS-Base.repo /etc/yum.repos.d/CentOS-Base.repo.backup
 
 * 下载对应版本repo文件, 放入`/etc/yum.repos.d/`(操作前请做好相应备份)
+
     * [CentOS5][CentOS5 repo]
+
     * [CentOS6][CentOS6 repo]
 
 * 运行`yum makecache`生成缓存
