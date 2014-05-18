@@ -1,7 +1,8 @@
 ---
 layout: post
 title: "配置开发环境镜像源"
-description: "配置开发环境镜像源"
+description: "国内配置开发环境的时候经常会要用到的这几个源, 默认源因为一些众所周知的原因非常慢或者根本上不了. 
+还好国内都有镜像, 收集如下。"
 category: "Configuration"
 tags: [Python, pip, Nodejs, Ruby]
 ---
