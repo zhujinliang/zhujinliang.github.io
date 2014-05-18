@@ -121,9 +121,9 @@ yum = Yellow dog Updater, Modified
 
 **yum安装**
 
-CentOS自带(yum-*.noarch.rpm)
+CentOS自带(yum-xx.noarch.rpm)
 
-    rpm -ivh yum-*.noarch.rpm
+    rpm -ivh yum-xx.noarch.rpm
 
 在第一次启用yum之前首先需要导入系统的RPM-GPG-KEY：
 
