@@ -51,6 +51,10 @@ Netfilter/iptables（简称为`iptables`）组成Linux平台下的包过滤防�
 有三种可用的表选项：`filter`、`nat`和`mangle`。该选项不是必需的，如果未指定，则**filter用作默认表**。
 
 * `filter`表用于一般的信息包过滤，包含INPUT、OUTPUT和FORWAR链。
+    * INPUT:数据包的目地的是LINUX主机本身
+    * OUTPUT:数据包由LINUX主机本身发送
+    * FORWARD:数据包从一个接口进入，另一个接口发出
+
 * `nat`表用于要转发的信息包，它包含PREROUTING、OUTPUT和POSTROUTING链。
 * `mangle`表,如果信息包及其头内进行了任何更改，则使用mangle表。该表包含一些规则来标记用于高级路由的信息包以及PREROUTING和OUTPUT链。
 
