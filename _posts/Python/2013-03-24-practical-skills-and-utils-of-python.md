@@ -5,7 +5,7 @@ description: "收集的一些Python实用技巧和工具。"
 category: "Python"
 tags: [Python]
 ---
-{% include JB/setup %}
+
 
 
 前段时间收集的一些Python实用技巧和工具。

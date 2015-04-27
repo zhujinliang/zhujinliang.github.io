@@ -6,7 +6,6 @@ description: "国内配置开发环境的时候经常会要用到的这几个源
 category: "Configuration"
 tags: [Python, pip, Nodejs, Ruby]
 ---
-{% include JB/setup %}
 
 # 配置开发环境镜像源
 

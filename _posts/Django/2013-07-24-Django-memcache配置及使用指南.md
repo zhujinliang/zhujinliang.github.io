@@ -7,7 +7,7 @@ description: "Django提供了一个稳定的缓存系统让你缓存动态页面
 category: "Django"
 tags: [Django, Memcache]
 ---
-{% include JB/setup %}
+
 
 ## Django缓存
 
@@ -264,9 +264,9 @@ CACHES = {
 
 查看memcached的使用情况，如下图：
 
-![memcached的使用情况1]({{ IMAGE_PATH }}/memcache/memcache-usage1.png)
+![memcached的使用情况1](/assets/images/memcache/memcache-usage1.png)
 
-![memcached的使用情况2]({{ IMAGE_PATH }}/memcache/memcache-usage2.png)
+![memcached的使用情况2](/assets/images/memcache/memcache-usage2.png)
 
 具体的每个参数的意思，后面有空再细细加上。
 

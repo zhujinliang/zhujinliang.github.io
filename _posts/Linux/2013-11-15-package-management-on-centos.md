@@ -5,7 +5,7 @@ description: "利用rpm和yum对CentOS下软件包进行管理。"
 category: "Linux"
 tags: [Linux, rpm, yum]
 ---
-{% include JB/setup %}
+
 
 # CentOS下软件包管理
 

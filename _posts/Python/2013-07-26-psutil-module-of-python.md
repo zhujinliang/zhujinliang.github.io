@@ -5,7 +5,7 @@ description: "psutil是一个用于获得处理器和系统相关信息的模块
 category: "Python"
 tags: [Python, System Status]
 ---
-{% include JB/setup %}
+
 
 ## psutil简介
 

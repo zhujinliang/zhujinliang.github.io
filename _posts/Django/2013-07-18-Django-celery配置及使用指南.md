@@ -6,7 +6,7 @@ description: "Django-celery用作异步任务管理非常方便，借助Django�
 category: "Django"
 tags: [Django, Celery]
 ---
-{% include JB/setup %}
+
 
 ## 介绍
 Django-celery用作异步任务管理非常方便，借助Django的admin后台管理，可以管理员可以方便的在后台

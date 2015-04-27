@@ -5,7 +5,7 @@ description: "`mod_evasive` 是Apache（httpd)服务器的防DDOS的一个模块
 category: "Apache"
 tags: [DDOS Apache]
 ---
-{% include JB/setup %}
+
 
 
 前些天,网站访问很慢,有很多httpd的进程，从`Apache`的访问日志来看，有几个IP一直在不断的访问网站，导致服务器的负荷太重，怀疑有攻击或者是有爬虫在爬我们网站，便在网上搜解决办法，提供的主要方案是使用mod_evasive模块。

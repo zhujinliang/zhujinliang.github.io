@@ -5,7 +5,7 @@ description: "MPM，是Multi -Processing Modules的缩写，就是多处理模�
 category: "Apache"
 tags: [MPM, Apache]
 ---
-{% include JB/setup %}
+
 
 
 最近，在开发的网站的服务器由于大量搜索引擎的爬虫访的光顾，某一时段，当请求过多是，Apache会产生大量的httpd进程，多时高达100多个httpd进程，导致服务器的负载直接飙升至100多，内存几乎耗尽，网站瘫痪，服务器也瘫痪，有时连ssh也基本登不上去，只能通过联系服务器商来重启服务器解决。这个问题十分的困扰我们团队，于是，便在查找了关于Apache优化的一些资料，了解到可以在MPM模块上做文章，收集整理了一些关于MPM的资料，以便以后查阅。

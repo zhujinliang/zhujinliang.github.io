@@ -6,7 +6,6 @@ South可以作为syncdb的替代，South能够检测对models的更改并同步�
 category: "Django"
 tags: [South, Django]
 ---
-{% include JB/setup %}
 
 ## South概述
 针对django自带的syncdb同步models和数据库的缺陷开发的数据迁移工具。

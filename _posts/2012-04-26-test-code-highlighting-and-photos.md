@@ -5,7 +5,7 @@ description: "测试代码高亮, 测试图片显示"
 category: "test"
 tags: [jekyll]
 ---
-{% include JB/setup %}
+
 
 首先测试代码高亮。
 

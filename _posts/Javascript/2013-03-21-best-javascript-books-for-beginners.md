@@ -5,7 +5,7 @@ description: "Best JavaScript Books for Beginners"
 category: "JavaScript"
 tags: [JavaScript, Books]
 ---
-{% include JB/setup %}
+
 
 1. [JavaScript: Just the Basics - A Primer for the Complete Beginner][1]
 2. [JavaScript, A Beginner's Guide][2]

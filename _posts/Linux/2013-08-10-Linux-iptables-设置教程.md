@@ -5,7 +5,7 @@ description: "Netfilter/iptables（简称为`iptables`）组成Linux平台下的
 category: "Linux"
 tags: [iptables, Linux, Server]
 ---
-{% include JB/setup %}
+
 
 
 

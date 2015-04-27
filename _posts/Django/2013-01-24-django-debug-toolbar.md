@@ -1,11 +1,10 @@
 ---
 layout: post
-title: "Django-debug-toolbar --- an edge tool for Django development"
+title: "Django-debug-toolbar"
 description: "在调试Django的程序时可以显示各种关于当前request/response的调试信息，以及模版渲染，SQL语句查询等信息。"
 category: "Django"
 tags: [Django]
 ---
-{% include JB/setup %}
 
 ## 介绍
 
@@ -122,20 +121,20 @@ DEBUG_TOOLBAR_PANELS = (
 
 运行Django应用，便可以在浏览器的右上角看到一个浮动的图标，如下图所示：
 
-![浮动图标]({{ IMAGE_PATH }}/django-debug-toolbar/toolbar-hide.png)
+![浮动图标](/assets/images/django-debug-toolbar/toolbar-hide.png)
 
 
 * Debug-toolbar调试面板
 
 点击图标之后，会展开整个调试面板，可以选择相关的信息进行查看，如下图所示：
 
-![调试面板]({{ IMAGE_PATH }}/django-debug-toolbar/toolbar-expand.png)
+![调试面板](/assets/images/django-debug-toolbar/toolbar-expand.png)
 
 * 以`template`信息为例
 
 点击Template，会显示此Web页面所用到的模版，以及模版中的context，如下图所示：
 
-![template信息]({{ IMAGE_PATH }}/django-debug-toolbar/template-detail.png)
+![template信息](/assets/images/django-debug-toolbar/template-detail.png)
 
 好了，现在就开始Django-debug-toolbar这件利器的体验之旅吧！
 

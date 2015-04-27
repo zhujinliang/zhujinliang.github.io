@@ -6,7 +6,7 @@ description: "软件开发中伴随的软件版本的发布，每一个版本相
 category: "Project Management"
 tags: [version, specification]
 ---
-{% include JB/setup %}
+
 
 #软件版本命名规范
 

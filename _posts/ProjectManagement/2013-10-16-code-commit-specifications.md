@@ -1,11 +1,9 @@
 ---
 layout: post
 title: "代码提交规范"
-description: "当开发团队中多人合作时，每个人都有自己的代码提交习惯，当合作人员多时，必然会导致混乱，所以代码提交规范的提出势在必 行。本文参考了国内外的一些开发人员的建议，总结了一个简单可行的代码提交规范。"
 category: "Project Management"
-tags: [git, commit, specification]
 ---
-{% include JB/setup %}
+
 
 # 代码提交规范
 
@@ -25,6 +23,7 @@ tags: [git, commit, specification]
 * 两个改动放在一次 commit 中。如“修改用户注册不成功的处理和用户登录的验证”，请把它拆开分别 commit。
 * 有些动词用现在时，而不是完成时，例如不要说“改好了(fixed)…，解决了(solved)…, 增加了(added)…，修改了(revised)…”，而应该说“增加(add)…，修改(revise)…，解决(solve)…”，用一种已经完成的口气，总是让人感觉有点自大。
 
+<!-- more -->
 ## Commit信息规范
 
 一个好的提交信息的规范，可以使得我们的提交日志的信息可读性更好，以下是一些基本的约定：

@@ -5,7 +5,7 @@ description: "JavaScript To Learn"
 category: "JavaScript"
 tags: [JavaScript]
 ---
-{% include JB/setup %}
+
 
 
 ## Basic

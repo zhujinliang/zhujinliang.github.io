@@ -5,7 +5,7 @@ description: "本文会给你们展示50个jquery代码片段，这些代码能�
 category: "JavaScript"
 tags: [JavaScript, jQuery]
 ---
-{% include JB/setup %}
+
 
 本文会给你们展示50个jquery代码片段，这些代码能够给你的JavaScript项目提供帮助。
 

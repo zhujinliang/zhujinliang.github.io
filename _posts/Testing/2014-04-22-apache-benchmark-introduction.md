@@ -5,7 +5,7 @@ description: "Apache Benchmark，简称`ab` 是 Apache 附带的一个小工具 
 category: "Testing"
 tags: [Testing, WEB压力测试工具, Apache Benchmark]
 ---
-{% include JB/setup %}
+
 
 ## Apache Benchmark介绍
 
@@ -24,6 +24,8 @@ Fedora, RHEL, Centos环境下安装：
 输入以下命令：
 
     ab www.baidu.com/
+
+<!-- more -->
 
 测试结果如下：
 

@@ -6,7 +6,7 @@ pip用来安装和管理python包的命令，可以代替easy_install。"
 category: "Python"
 tags: [pip, Python]
 ---
-{% include JB/setup %}
+
 
 ## pip简介
 
