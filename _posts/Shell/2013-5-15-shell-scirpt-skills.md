@@ -1,7 +1,7 @@
 
 ---
-layout: post$
-title: "Shell Script Skill"
+layout: post
+title: "Shell小技巧"
 category: "Shell"
 tags: [Shell, Linux]
 ---
