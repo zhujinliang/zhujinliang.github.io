@@ -48,6 +48,7 @@ MySQL用户和权限相关的操作介绍。
 
         DROP USER 'username'@'host';
 
+<!-- more -->
 
 ## 权限相关
 
