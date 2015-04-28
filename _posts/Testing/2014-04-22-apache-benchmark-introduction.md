@@ -1,7 +1,6 @@
 ---
 layout: post
 title: "Apache Benchmark简介--WEB压力测试工具"
-description: "Apache Benchmark，简称`ab` 是 Apache 附带的一个小工具 ， 专门用于 HTTP Server 的 benchmark testing ， 可以同时模拟多个并发请求。"
 category: "Testing"
 tags: [Testing, WEB压力测试工具, Apache Benchmark]
 ---

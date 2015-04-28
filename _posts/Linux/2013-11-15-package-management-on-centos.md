@@ -1,7 +1,6 @@
 ---
 layout: post
 title: "CentOS下软件包管理"
-description: "利用rpm和yum对CentOS下软件包进行管理。"
 category: "Linux"
 tags: [Linux, rpm, yum]
 ---
@@ -55,7 +54,7 @@ yum安装                      apt-get安装
 
         rpm -qR 软件名
 
- 
+<!-- more -->
 
 ### 对于未安装的软件包信息查询
 

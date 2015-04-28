@@ -1,7 +1,6 @@
 ---
 layout: post
 title: "Python的psutil模块---用于获得处理器和系统相关信息"
-description: "psutil是一个用于获得处理器和系统相关信息的模块。"
 category: "Python"
 tags: [Python, System Status]
 ---
@@ -62,6 +61,7 @@ tags: [Python, System Status]
     
     python setup.py install
 
+<!-- more -->
 ## 使用psutil
 `psutil`的[官方文档][3]提供了很多Example，基本上稍微看一下应该就会了的。
 

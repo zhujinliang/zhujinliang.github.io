@@ -1,8 +1,6 @@
 ---
 layout: post
 title: "pip使用简介"
-description: "pip的意思是破蛋而出，继承了python的思维，呵呵～python的包有以egg命名的，意思是蛇蛋，如此便自然而然的明白如此命名的原因。
-pip用来安装和管理python包的命令，可以代替easy_install。"
 category: "Python"
 tags: [pip, Python]
 ---

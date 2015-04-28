@@ -1,7 +1,6 @@
 ---
 layout: post
 title: "Linux iptables设置教程"
-description: "Netfilter/iptables（简称为`iptables`）组成Linux平台下的包过滤防火墙，与大多数的Linux软件一样，这个包过滤防火墙是免费的，它可以代替昂贵的商业防火墙解决方案，完成封包过滤、封包重定向和网络地址转换（NAT）等功能。Iptables有利于在 Linux 系统上更好地控制 IP 信息包过滤和防火墙配置。"
 category: "Linux"
 tags: [iptables, Linux, Server]
 ---
@@ -37,6 +36,7 @@ Netfilter/iptables（简称为`iptables`）组成Linux平台下的包过滤防�
         /etc/sysconfig/iptables
 **Note**: `service iptables`命令会自动调用`/etc/rc.d/init.d/iptables`。
 
+<!-- more -->
 ## iptables命令用法
 `iptables`命令语法：
 

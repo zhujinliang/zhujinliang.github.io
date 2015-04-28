@@ -1,9 +1,6 @@
 ---
 layout: post
 title: "Django+memcache配置及使用指南"
-description: "Django提供了一个稳定的缓存系统让你缓存动态页面的结果，这样在接下来有相同的请求就
-可以直接使用缓存中的数据，避免不必要的重复计算。另外Django还提供了不同粒度数据的缓存，
-例如：你可以缓存整个页面，也可以缓存某个部分，甚至缓存整个网站。"
 category: "Django"
 tags: [Django, Memcache]
 ---
@@ -30,6 +27,7 @@ Django提供了可用的缓存方案，分别如下：
 目前为止Django可得到的最快的最高效的缓存类型是基于内存的缓存框架Memcached，
 这里将介绍Django中如何使用Memcached来提高网站的响应速度。
 
+<!-- more -->
 ## Memcached
 
 `Memcached` 是一个高性能的分布式的内存对象缓存系统，用于动态Web应用以减轻数据库负载。

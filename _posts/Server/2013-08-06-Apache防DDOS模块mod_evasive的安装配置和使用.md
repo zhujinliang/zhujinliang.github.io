@@ -1,7 +1,6 @@
 ---
 layout: post
 title: "Apache防DDOS模块mod_evasive的安装配置和使用"
-description: "`mod_evasive` 是Apache（httpd)服务器的防DDOS的一个模块。对于WEB服务器来说，是目前比较好的一个防护DDOS攻击的扩展模块。虽然并不能完全防御DDOS攻击，但在一定条件下，还是起到缓服Apache（httpd)服务器的压力。如配合iptables、硬件防火墙等防火墙设备配合使用，可能有更好的效果。"
 category: "Apache"
 tags: [DDOS Apache]
 ---
@@ -39,6 +38,7 @@ mod_evasive 的官方地址： [http://www.zdziarski.com](http://www.zdziarski.c
            DOSBlockingPeriod   360
         </IfModule>
 
+<!-- more -->
 ## 配置相关参数
 
 * DOSHashTableSize 3097：

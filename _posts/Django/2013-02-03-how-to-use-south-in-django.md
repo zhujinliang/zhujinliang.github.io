@@ -1,10 +1,7 @@
 ---
 layout: post
 title: "South在Django中使用"
-description: "针对django自带的syncdb同步models和数据库的缺陷开发的数据迁移工具。
-South可以作为syncdb的替代，South能够检测对models的更改并同步到数据库。"
 category: "Django"
-tags: [South, Django]
 ---
 
 ## South概述
@@ -39,6 +36,8 @@ South可以作为syncdb的替代，South能够检测对models的更改并同步�
         python manage.py syncdb      # syncdb已经被South更改，用来创建south_migrationhistory表  
  
         python manage.py convert_to_south yourappname   # 在yourappname目录下面创建migrations目录以及第一次迁移需要的migration包  
+
+<!-- more -->
 
 ## South进阶
 

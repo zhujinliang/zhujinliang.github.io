@@ -2,7 +2,6 @@
 ---
 layout: post$
 title: "Shell Script Skill"
-description: "整理了一些shell小技巧，在写shell脚本的时候，会用到，例如让显示的提示信息丰富多彩，调试更加方便等等。"
 category: "Shell"
 tags: [Shell, Linux]
 ---
@@ -52,6 +51,8 @@ tags: [Shell, Linux]
     function debug() { ((DEBUG)) && echo ">>> $*"; }
     function debug() { [ "$DEBUG" ] && echo ">>> $*"; }
 ```
+
+<!-- more -->
 ### 检查特定的可执行文件是否存在
 ```
     OK=0

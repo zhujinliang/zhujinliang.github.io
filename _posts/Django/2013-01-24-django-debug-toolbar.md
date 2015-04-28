@@ -1,9 +1,7 @@
 ---
 layout: post
 title: "Django-debug-toolbar"
-description: "在调试Django的程序时可以显示各种关于当前request/response的调试信息，以及模版渲染，SQL语句查询等信息。"
 category: "Django"
-tags: [Django]
 ---
 
 ## 介绍
@@ -34,7 +32,7 @@ tags: [Django]
 
 
 *Note*: Django-debug-tool只能在Django1.3以上版本使用。
-
+<!-- more -->
 
 ## 安装
 

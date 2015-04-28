@@ -1,7 +1,6 @@
 ---
 layout: post
 title: "50 jQuery Snippets That Will Help You Become A Better JavaScript Developer"
-description: "本文会给你们展示50个jquery代码片段，这些代码能够给你的JavaScript项目提供帮助。"
 category: "JavaScript"
 tags: [JavaScript, jQuery]
 ---
@@ -43,6 +42,7 @@ tags: [JavaScript, jQuery]
     //找出你希望切换的媒体类型（media-type），然后把href设置成新的样式表。
     $('link[media='screen']').attr('href', 'Alternative.css');
 
+<!-- more -->
 ## 4. 如何限制选择范围（基于优化目的）：
 
     //尽可能使用标签名来作为类名的前缀，

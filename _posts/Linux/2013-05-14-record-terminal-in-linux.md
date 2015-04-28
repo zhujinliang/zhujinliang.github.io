@@ -1,8 +1,6 @@
 ---
 layout: post
 title: "Record Terminal In Linux"
-description: "Linux下有很多方便好用的工具，当然也不乏屏幕录制软件，但是如果仅仅是录制终端的话，大可不必非得用
-屏幕录制软件不可。介绍两个我自己使用过的录制终端的方法。"
 category: "Linux"
 tags: [Linux]
 ---
@@ -64,6 +62,7 @@ $ exit     # 或者Ctrl + d 退出
 可以在ascii.io上注册一个自己的账号，然后在本地配置账号信息之后，可以在网站上查看自己上传的录制
 信息。
 
+<!-- more -->
 ## script
 
 我们也可以使用Shell 自带的命令来录制终端，主要使用的命令是script。

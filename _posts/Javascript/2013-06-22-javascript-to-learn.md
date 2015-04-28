@@ -36,6 +36,7 @@ tags: [JavaScript]
 
 * [Cube][12]- Time Series Data Collection and Analysis
 
+<!-- more -->
 ## Frontend
 
 * [JQuery][13]- a fast and concise JavaScript Library that simplifies HTML document traversing, event handling, animating, and Ajax interactions for rapid web development

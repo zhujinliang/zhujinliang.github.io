@@ -1,7 +1,6 @@
 ---
 layout: post
 title: "Practical Skills and Utils of Python"
-description: "收集的一些Python实用技巧和工具。"
 category: "Python"
 tags: [Python]
 ---
@@ -49,6 +48,7 @@ tags: [Python]
     print nfc, 1
     >>> ['Packers', '49ers'] 1
 	
+<!-- more -->
 
 ## 数字技巧
 	

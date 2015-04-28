@@ -1,8 +1,6 @@
 ---
 layout: post
 title: "Django-celery配置及使用指南"
-description: "Django-celery用作异步任务管理非常方便，借助Django的admin后台管理，可以管理员可以方便的在后台
-添加和管理定时的任务，而不用通过Shell的crontab来实现，非常的直观，且方便修改。"
 category: "Django"
 tags: [Django, Celery]
 ---
@@ -37,6 +35,8 @@ Django-celery用作异步任务管理非常方便，借助Django的admin后台�
     以后，可以运行命令查看RabbitMQ Server的状态：
 
         # rabbitmqctl status
+
+<!-- more -->
 
 ### 配置Django-celery
 在Django的settings文件中做如下设置：
