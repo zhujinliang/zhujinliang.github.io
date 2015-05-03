@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "50 jQuery Snippets That Will Help You Become A Better JavaScript Developer"
+title: "50 jQuery 代码片段"
 category: "JavaScript"
 tags: [JavaScript, jQuery]
 ---
@@ -43,6 +43,7 @@ tags: [JavaScript, jQuery]
     $('link[media='screen']').attr('href', 'Alternative.css');
 
 <!-- more -->
+
 ## 4. 如何限制选择范围（基于优化目的）：
 
     //尽可能使用标签名来作为类名的前缀，
