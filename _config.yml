@@ -9,7 +9,7 @@ blog:
     description: Stay hungry, stay foolish.                                        # 博客描述
     title: Jinliang's Blog                                              # 网页标题
     url: http://zhujinliang.cn                                                # 博客地址
-    duoshuo: 11628699                                            # 多说ID
+    duoshuo: zhujinliang                                            # 多说ID
     tongji: 99021da84376c11c97c81c89445ed1d5                                             # 百度统计ID
     qiniu:                                               # 七牛云地址
 author:
