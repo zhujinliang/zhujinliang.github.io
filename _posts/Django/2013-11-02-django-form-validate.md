@@ -23,6 +23,7 @@ Django框架提供了一个forms类，来处理web开发中的表单相关事项
 
 5. 最后，如果有错误`is_valid()`返回`False`，否则返回`True`。
 
+<!-- more -->
 
 ## 验证：
 分为多个层次,检测失败会返回 ValidationError
