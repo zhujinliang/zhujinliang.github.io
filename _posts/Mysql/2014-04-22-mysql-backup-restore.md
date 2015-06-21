@@ -17,7 +17,7 @@ MySQL备份和还原,都是利用`mysqldump`、`mysql`和`source`命令来完成
     mysqldump -u 用户名 -p 数据库名 > 导出的文件名
     mysqldump -u dbadmin -p myblog > /home/jzhu/blog/database_bak/myblog.sql
 
-2.导出一个表
+2.导出一个表，包括结构和数据
 
     mysqldump -u 用户名 -p 数据库名 表名> 导出的文件名
     mysqldump -u dbadmin -p myblog wp_users> /home/jzhu/blog/database_bak/blog_users.sql
@@ -26,20 +26,32 @@ MySQL备份和还原,都是利用`mysqldump`、`mysql`和`source`命令来完成
 
     mysqldump -u dbadmin -p -d --add-drop-table myblog > /home/jzhu/blog/database_bak/blog_struc.sql
     
-说明：
-
-* -d 没有数据
-* --add-drop-table 在每个create语句之前增加一个drop table
 
 4.导出数据库一个表结构
 
-    mysqldump -u dbadmin -p -d --add-drop-table myblog  wp_users> /home/jzhu/blog/database_bak/blog_users_struc.sql
+    mysqldump -u dbadmin -p -d --add-drop-table myblog  blog_users> /home/jzhu/blog/database_bak/blog_users_struc.sql
+
+5.导出数据库的一个表的数据
+    
+    mysqldump　-t　数据库名 表名　-uroot　-p　>　xxx.sql　 
+
+6.导出某个表的部分数据
+
+    mysqldump -u用户名 -p密码 数据库名 表名 --where="筛选条件" > 导出文件路径
+    mysqldump -uroot -p123456 myblog blog_users --where=" id > 100" > /tmp/blog_users.sql
+说明：
+
+* -d 没有数据，只有表结构
+* -t 没有表结构，只有数据
+* --add-drop-table 在每个create语句之前增加一个drop table
+* --where/-w 用来设定数据导出的条件，使用方式和SQL查询命令中中的where基本上相同。
 
 <!-- more -->
 
 ### 数据库的导入
 用 `mysqldump` 备份出来的文件是一个可以直接倒入的 SQL 脚本，有两种方法可以将数据导入。
-#### 方法1
+
+### 方法1
 1. 进入到导出的sql文件所在的目录
 
 2. 执行命令，导入sql文件，还原数据库
