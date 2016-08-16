@@ -19,6 +19,8 @@ Requests 的哲学是以 PEP 20 的习语为中心开发的，所以它比 urlli
     Complex is better than complicated.(复杂优于繁琐)
     Readability counts.(重要的是可读性)
 
+<!-- more -->
+
 ## 安装 Requests
 
 通过pip安装
