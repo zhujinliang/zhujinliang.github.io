@@ -17,6 +17,7 @@ Spring 2.5 中除了提供 @Component 注释外，还定义了几个拥有特殊
 * `@Controller` 控制层Controller
 * `@Component` 对那些比较中立的类
 
+<!-- more -->
 
 ## 使用
 
