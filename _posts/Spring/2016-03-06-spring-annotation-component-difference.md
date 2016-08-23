@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Spring注解@Component、@Repository、@Service、@Controller区别"
-category: "Java"
+category: "Spring"
 date: 2016-03-06
 ---
 
