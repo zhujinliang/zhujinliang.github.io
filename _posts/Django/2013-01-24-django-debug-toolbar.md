@@ -1,10 +1,11 @@
 ---
 layout: post
 title: "Django-debug-toolbar"
-category: "Django"
+date: 2013-01-24
+tag: Django
 ---
 
-## 介绍
+### 介绍
 
 `Django-debug-toolbar`在调试Django的程序时可以显示各种关于当前request/response的调试信息，以及模版渲染，SQL语句查询等信息。
 
@@ -34,7 +35,7 @@ category: "Django"
 *Note*: Django-debug-tool只能在Django1.3以上版本使用。
 <!-- more -->
 
-## 安装
+### 安装
 
 * 利用`pip`安装
 
@@ -45,7 +46,7 @@ category: "Django"
 	sudo python setup.py install
 
 
-## 配置
+### 配置
 
 在settings.py文件（建议添加在本地的settings.py文件或者开发使用的settings.py文件）中添加如下配置信息：
 
@@ -113,7 +114,7 @@ DEBUG_TOOLBAR_PANELS = (
 *Note*:还可以有更灵活的配置，请点击[这里](https://pypi.python.org/pypi/django-debug-toolbar)。
 
 
-## 使用方法
+### 使用方法
 
 * `DJDT`浮动图标
 
@@ -138,6 +139,6 @@ DEBUG_TOOLBAR_PANELS = (
 
 
 
-## 参考
+### 参考
 
 下载Django-debug-toolbar以及相关文档请点击[这里](https://pypi.python.org/pypi/django-debug-toolbar)

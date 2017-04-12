@@ -1,11 +1,12 @@
-sql---
+---
 layout: post
-title: SQL基础语法
-category: "Database"
+title: "SQL基础语法"
+date: 2013-05-07
+tag: Database
 ---
 
 
-# 基本规则
+### 基本规则
 * 数据库中元组对应的是行，属性值对应的是列。
 
 * SQL 对大小写不敏感！
@@ -14,7 +15,7 @@ category: "Database"
 
 * MySQL的SQL语句要求每句后面加分号（；）
 
-# SQL DML 和 DDL
+### SQL DML 和 DDL
 可以把 SQL 分为两个部分：数据操作语言 (DML) 和 数据定义语言 (DDL)。
 
 查询和更新指令构成了 SQL 的 DML 部分：
@@ -45,7 +46,7 @@ SQL 中最重要的 DDL 语句:
 
 <!-- more -->
 
-## SQL SELECT 语句
+### SQL SELECT 语句
 
 `SELECT` 语句用于从表中选取数据。
 
@@ -63,7 +64,7 @@ SQL 中最重要的 DDL 语句:
 
 从表中选出所有的列。*提示：*星号（ * ) 是选取所有列的快捷方式。
 
-### SQL SELECT DISTINCT 语句
+#### SQL SELECT DISTINCT 语句
 
 在表中，可能会包含重复值。这并不成问题，不过，有时您也许希望仅仅列出不同（distinct）的值。
 
@@ -77,7 +78,7 @@ SQL 中最重要的 DDL 语句:
 
     SELECT DISTINCT Company FROM Orders 
 
-## WHERE 子句
+### WHERE 子句
 
 如需有条件地从表中选取数据，可将 WHERE 子句添加到 SELECT 语句。
 
@@ -125,7 +126,7 @@ SQL 使用单引号来环绕文本值（大部分数据库系统也接受双引�
 
     SELECT * FROM Persons WHERE Year>'1965'
 
-## AND 和 OR 运算符
+### AND 和 OR 运算符
 
 `AND` 和 `OR` 可在 WHERE 子语句中把两个或多个条件结合起来。
 
@@ -150,7 +151,7 @@ OR 运算符实例
 
     SELECT * FROM Persons WHERE (FirstName='Thomas' OR FirstName='William')AND LastName='Carter'
 
-## ORDER BY 语句
+### ORDER BY 语句
 
 `ORDER BY` 语句用于根据指定的列对结果集进行排序。
 
@@ -168,7 +169,7 @@ ORDER BY 语句默认按照*升序*对记录进行排序。
 
 第一列中出现相同的值，才会按照第二列来排序。
 
-## INSERT INTO 语句
+### INSERT INTO 语句
 
 `INSERT INTO` 语句用于向表格中插入新的行。
 
@@ -180,7 +181,7 @@ ORDER BY 语句默认按照*升序*对记录进行排序。
 
     INSERT INTO table_name (列1, 列2,...) VALUES (值1, 值2,....)
 
-## Update 语句
+### Update 语句
 
 `Update` 语句用于修改表中的数据。WHERE来选择条件。
 
@@ -195,7 +196,7 @@ ORDER BY 语句默认按照*升序*对记录进行排序。
     UPDATE Person SET Address = 'Zhongshan 23', City = 'Nanjing'
     WHERE LastName = 'Wilson'
 
-## DELETE 语句
+### DELETE 语句
 
 `DELETE` 语句用于删除表中的行。
 
@@ -219,7 +220,7 @@ ORDER BY 语句默认按照*升序*对记录进行排序。
 
     DELETE * FROM table_name
 
-## TRUNCATE 语句
+### TRUNCATE 语句
 删除表内的所有数据，不删表本身，保留表结构：
 
     TRUNCATE TABLE 表名

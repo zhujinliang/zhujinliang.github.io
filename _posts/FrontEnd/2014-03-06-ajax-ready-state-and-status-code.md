@@ -1,12 +1,12 @@
 ---
 layout: post
 title: "AJAX 状态值(readyState)和状态码(status)"
-category: "JavaScript"
 date: 2014-03-06
+tag: "JavaScript"
 ---
 
 
-## AJAX状态值与状态码区别
+### AJAX状态值与状态码区别
 
 **AJAX状态值**是指，运行AJAX所经历过的几种状态，无论访问是否成功都将响应的步骤，可以理解成为AJAX运行步骤。如：正在发送，正在响应等，由AJAX对象与服务器交互时所得；使用“ajax.readyState”获得。（由数字1~4单位数字组成）
 
@@ -17,7 +17,7 @@ date: 2014-03-06
 		putData(ajax.responseText);
 	}
 
-## AJAX运行步骤与状态值说明
+### AJAX运行步骤与状态值说明
 
 在AJAX实际运行当中，对于访问XMLHttpRequest（XHR）时并不是一次完成的，而是分别经历了多种状态后取得的结果，对于这种状态在AJAX中共有5种，分别是：
 
@@ -31,7 +31,7 @@ date: 2014-03-06
 
 <!-- more -->
 
-## AJAX状态码说明
+### AJAX状态码说明
 也就是HTTP 状态码，这个应该大家都明白的，这里就简单提一下。
 
 * 1XX：请求收到，继续处理
@@ -41,5 +41,5 @@ date: 2014-03-06
 * 5XX：服务器执行一个完全有效请求失败
 
 
-## AJAX运行步骤示义图
+### AJAX运行步骤示义图
 ![Ajax status code](http://zhujinliang.qiniudn.com/img/blog/ajax_status_code.jpg)

@@ -1,13 +1,13 @@
 ---
 layout: post
 title: "git submodule 基本操作"
-category: "git"
 date: 2015-06-28
+tag: "git"
 ---
 
 
 
-# 介绍
+### 介绍
 有时候多个项目的代码会依赖一些公共的库，一般会把公共的库提取出来单独建一个仓库做版本控制，同时其他项目可以通过包含的方式来使用该库。
 
 引用一段《Git权威指南》的话： 项目的版本库在某些情况虾需要引用其他版本库中的文件，例如公司积累了一套常用的函数库，被多个项目调用，显然这个函数库的代码不能直接放到某个项目的代码中，而是要独立为一个代码库，那么其他项目要调用公共函数库该如何处理呢？分别把公共函数库的文件拷贝到各自的项目中会造成冗余，丢弃了公共函数库的维护历史，这显然不是好的方法。
@@ -25,12 +25,17 @@ git submodule add /path/to/repos/foo.git dest/dir
 
  
 ### 更新submodule的最新代码
- 
+
+
 ```
 git submodule init  # 在.git/config中注册submodule信息
+
 git submodule update  # 更新子模块到最新依赖的commit点
- 
+```
+
 或
+
+```
 git submodule update —-init —-recursive
 ```
  
@@ -46,6 +51,7 @@ git add .
 git commit -m "Commit message"
 git push
 ```
+
 其实进入submodule目录之后，相当于在一个独立git代码仓库中操作，所以修改和提交代码跟平常一样。
 
 

@@ -1,12 +1,10 @@
 ---
 layout: post
 title: "Django-celery配置及使用指南"
-category: "Django"
 tags: [Django, Celery]
 ---
 
-
-## 介绍
+### 介绍
 Django-celery用作异步任务管理非常方便，借助Django的admin后台管理，可以管理员可以方便的在后台
 添加和管理定时的任务，而不用通过Shell的crontab来实现，非常的直观，且方便修改。
 
@@ -15,8 +13,9 @@ Django-celery用作异步任务管理非常方便，借助Django的admin后台�
 最近在一个项目中用到了Django-celery，之前一直使用的是Django的Database作为celery的Broker，
 一直没有运行起来，索性按照文档中的说明，按最简单的方式来配置。具体配置过程，请继续阅读。
 
-## 配置
-### 配置RabbitMQ
+### 配置
+
+#### 配置RabbitMQ
 
 配置Django-celery使用RabbitMQ作为Broker.
 
@@ -38,7 +37,8 @@ Django-celery用作异步任务管理非常方便，借助Django的admin后台�
 
 <!-- more -->
 
-### 配置Django-celery
+#### 配置Django-celery
+
 在Django的settings文件中做如下设置：
 
 * 添加djcelery到INSTALLED_APPS
@@ -60,7 +60,7 @@ BROKER_URL = 'amqp://guest:guest@localhost:5672//'
 CELERYBEAT_SCHEDULER = 'djcelery.schedulers.DatabaseScheduler'
 {% endhighlight %}
 
-## 启动Django-celery
+### 启动Django-celery
 
 在Django中运行以下命令，在后台运行celery
 
@@ -75,7 +75,8 @@ CELERYBEAT_SCHEDULER = 'djcelery.schedulers.DatabaseScheduler'
 
 若有运行结果，显示celery的进程号等信息，则表示Django-celery已经运行了。
 
-## 使用Django-celery
+### 使用Django-celery
+
 使用Django-celery可以在admin后台创建一个任务，在指定的时间执行。
 使用步骤：
 

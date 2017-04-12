@@ -1,22 +1,22 @@
 ---
 layout: post
 title: "配置开发环境镜像源"
-category: "Configuration"
+date: 2013-12-13
+tag: 环境配置
 ---
 
-# 配置开发环境镜像源
 
 国内配置开发环境的时候经常会要用到的这几个源, 默认源因为一些众所周知的原因非常慢或者根本上不了. 
 还好国内都有镜像, 收集如下。
 
-## 系统
+### 系统
 
 * [阿里云开源镜像站][aliyun]
 
 * [网易开源镜像站][wangyi]
 
 
-## Python PyPI (pip)
+### Python PyPI (pip)
 
 * 编辑`~/.pip/pip.conf`:
 
@@ -29,7 +29,7 @@ category: "Configuration"
 
 <!-- more -->
 
-## Node NPM
+### Node NPM
 
 * 编辑 `~/.npmrc`
 
@@ -40,7 +40,7 @@ category: "Configuration"
         registry = https://npm.taobao.org
 
 
-## Ruby Gem
+### Ruby Gem
 
 * 删除rubygems源，添加[淘宝ruby源][taobao_ruby]
 

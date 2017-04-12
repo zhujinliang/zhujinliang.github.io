@@ -1,12 +1,12 @@
 ---
 layout: post
 title: "Django+memcache配置及使用指南"
-category: "Django"
+date: 2013-07-24
 tags: [Django, Memcache]
 ---
 
 
-## Django缓存
+### Django缓存
 
 Django提供了一个稳定的缓存系统让你缓存动态页面的结果，这样在接下来有相同的请求就
 可以直接使用缓存中的数据，避免不必要的重复计算。另外Django还提供了不同粒度数据的缓存，
@@ -15,20 +15,17 @@ Django提供了一个稳定的缓存系统让你缓存动态页面的结果，�
 Django提供了可用的缓存方案，分别如下：
 
 * 内存缓冲 (Memcached)
-
 * 数据库缓存 (Database caching)
-
 * 文件系统缓存 (Filesystem caching)
-
 * 本地内存缓存 (Local-memory caching)
-
 * 仿缓存 (Dummy caching)（供开发时使用）
 
 目前为止Django可得到的最快的最高效的缓存类型是基于内存的缓存框架Memcached，
 这里将介绍Django中如何使用Memcached来提高网站的响应速度。
 
 <!-- more -->
-## Memcached
+
+### Memcached
 
 `Memcached` 是一个高性能的分布式的内存对象缓存系统，用于动态Web应用以减轻数据库负载。
 它通过在内存里维护一个统一的巨大的hash表，它能够用来存储各种格式的数据，包括图像、
@@ -38,7 +35,7 @@ Django提供了可用的缓存方案，分别如下：
 
 `Memcached`官方网站：[http://memcached.org](http://memcached.org)
 
-## 安装Memcached
+### 安装Memcached
 
 * 安装memcached server端
 
@@ -86,7 +83,7 @@ memcached协议与守护进程通信。这里我们需要用Python实现的Memca
 
 
 
-## 启动memcached
+### 启动memcached
 
 * 启动`memcached`命令：
 
@@ -123,7 +120,7 @@ memcached协议与守护进程通信。这里我们需要用Python实现的Memca
         /etc/sysconfig/memcached
 
 
-## 在Django中配置memcached
+### 在Django中配置memcached
 
 最简单的配置，如下：
 {% highlight python %}
@@ -166,7 +163,7 @@ CACHES = {
 
 **Note:**更多配置信息在Django文档中，请见[这里](https://docs.djangoproject.com/en/1.4/topics/cache/)
 
-## 使用memcached
+### 使用memcached
 
 * 在Python交互式命令行中测试memcache是否可以使用:
 
@@ -248,7 +245,7 @@ CACHES = {
     来缓存，若不指定，默认用`default`的来缓存。
 
 
-## 查看memcached使用情况
+### 查看memcached使用情况
 
 * 使用`telnet`登录
     

@@ -1,8 +1,8 @@
 ---
 layout: post
 title: "jQuery使用on代替delegate,live 用法区别"
-category: "JavaScript"
 date: 2014-01-12
+tag: "JavaScript"
 ---
 
 

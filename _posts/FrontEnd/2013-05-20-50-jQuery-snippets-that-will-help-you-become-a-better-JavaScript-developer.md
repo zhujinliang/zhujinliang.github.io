@@ -1,15 +1,14 @@
 ---
 layout: post
 title: "50 jQuery 代码片段"
-category: "JavaScript"
-tags: [JavaScript, jQuery]
+tag: [JavaScript, jQuery]
 ---
 
 
 本文会给你们展示50个jquery代码片段，这些代码能够给你的JavaScript项目提供帮助。
 
 
-## 0. 如何创建嵌套的过滤器：
+### 0. 如何创建嵌套的过滤器：
 
     //允许你减少集合中的匹配元素的过滤器，
     //只剩下那些与给定的选择器匹配的部分。在这种情况下，
@@ -17,7 +16,7 @@ tags: [JavaScript, jQuery]
     //包含class为“selected”（.selected）的子节点。
     .filter(":not(:has(.selected))")
 
-## 1. 如何重用元素搜索
+### 1. 如何重用元素搜索
 
     var allItems = $("div.item");
     var keepList = $("div#container1 div.item");
@@ -30,21 +29,21 @@ tags: [JavaScript, jQuery]
     });
     < /DIV>
 
-## 2. 任何使用has()来检查某个元素是否包含某个类或是元素：
+### 2. 任何使用has()来检查某个元素是否包含某个类或是元素：
 
     //jQuery 1.4.*包含了对这一has方法的支持。该方法找出
     //某个元素是否包含了其他另一个元素类或是其他任何的
     //你正在查找并要在其之上进行操作的东东。
     $("input").has(".email").addClass("email_icon");
 
-## 3. 如何使用jQuery来切换样式表
+### 3. 如何使用jQuery来切换样式表
 
     //找出你希望切换的媒体类型（media-type），然后把href设置成新的样式表。
     $('link[media='screen']').attr('href', 'Alternative.css');
 
 <!-- more -->
 
-## 4. 如何限制选择范围（基于优化目的）：
+### 4. 如何限制选择范围（基于优化目的）：
 
     //尽可能使用标签名来作为类名的前缀，
     //这样jQuery就不需要花费更多的时间来搜索
@@ -59,7 +58,7 @@ tags: [JavaScript, jQuery]
     <li><input type="radio" value="Item-Z" name="item" class="unknown" /> Item Z</li>
     </ul>
 
-## 5. 如何正确地使用ToggleClass：
+### 5. 如何正确地使用ToggleClass：
 
     //切换（toggle）类允许你根据某个类的
     //是否存在来添加或是删除该类。
@@ -68,49 +67,49 @@ tags: [JavaScript, jQuery]
     //toggleClass允许你使用下面的语句来很容易地做到这一点
     a.toggleClass('blueButton');
 
-## 6. 如何设置IE特有的功能：
+### 6. 如何设置IE特有的功能：
 
     if ($.browser.msie) {
     // Internet Explorer就是个虐待狂
     }
 
-## 7. 如何使用jQuery来代替一个元素：
+### 7. 如何使用jQuery来代替一个元素：
 
     $('#thatdiv').replaceWith('fnuh');
 
-## 8. 如何验证某个元素是否为空：
+### 8. 如何验证某个元素是否为空：
 
     if ($('#keks').html()) {
     //什么都没有找到;
     }
 
-## 9. 如何从一个未排序的集合中找出某个元素的索引号
+### 9. 如何从一个未排序的集合中找出某个元素的索引号
 
     $("ul > li").click(function () {
         var index = $(this).prevAll().length;
     });
 
-## 10. 如何把函数绑定到事件上：
+### 10. 如何把函数绑定到事件上：
 
     $('#foo').bind('click', function() {
         alert('User clicked on "foo."');
     });
 
-## 11. 如何追加或是添加html到元素中：
+### 11. 如何追加或是添加html到元素中：
 
 	$('#lal').append('sometext');
 
-## 12. 在创建元素时，如何使用对象字面量（literal）来定义属性
+### 12. 在创建元素时，如何使用对象字面量（literal）来定义属性
 
 	var e = $("", { href: "#", class: "a-class another-class", title: "..." });
 
-## 13. 如何使用多个属性来进行过滤
+### 13. 如何使用多个属性来进行过滤
 
     //在使用许多相类似的有着不同类型的input元素时，
     //这种基于精确度的方法很有用
     var elements = $('#someid input[type=sometype][value=somevalue]').get();
 
-## 14. 如何使用jQuery来预加载图像：
+### 14. 如何使用jQuery来预加载图像：
 
     jQuery.preloadImages = function() {
         for(var i = 0; i < arguments.length; i++) {
@@ -121,7 +120,7 @@ tags: [JavaScript, jQuery]
     $.preloadImages('image1.gif', '/path/to/image2.png', 'some/image3.jpg');
 
 
-## 15. 如何为任何与选择器相匹配的元素设置事件处理程序：
+### 15. 如何为任何与选择器相匹配的元素设置事件处理程序：
 
     $('button.someClass').live('click', someFunction);
     //注意，在jQuery 1.4.2中，delegate和undelegate选项
@@ -138,15 +137,15 @@ tags: [JavaScript, jQuery]
         $(this).toggleClass("hover");
     });
 
-## 16. 如何找到一个已经被选中的option元素：
+### 16. 如何找到一个已经被选中的option元素：
 
 	$('#someElement').find('option:selected');
 
-## 17. 如何隐藏一个包含了某个值文本的元素：
+### 17. 如何隐藏一个包含了某个值文本的元素：
 
 	$("p.value:contains('thetextvalue')").hide();
 
-## 18. 如果自动滚动到页面中的某区域
+### 18. 如果自动滚动到页面中的某区域
 
     jQuery.fn.autoscroll = function(selector) {
         $('html,body').animate(
@@ -157,25 +156,25 @@ tags: [JavaScript, jQuery]
     //然后像这样来滚动到你希望去到的class/area上。
     $('.area_name').autoscroll();
 
-## 19. 如何检测各种浏览器：
+### 19. 如何检测各种浏览器：
 
     检测Safari (if( $.browser.safari)),
     检测IE6及之后版本 (if ($.browser.msie && $.browser.version > 6 )),
     检测IE6及之前版本 (if ($.browser.msie && $.browser.version <= 6 )),
     检测FireFox 2及之后版本 (if ($.browser.mozilla && $.browser.version >= '1.8' ))
 
-## 20. 如何替换串中的词
+### 20. 如何替换串中的词
 
 	var el = $('#id');
     el.html(el.html().replace(/word/ig, ''));
 
-## 21. 如何禁用右键单击上下文菜单：
+### 21. 如何禁用右键单击上下文菜单：
 
     $(document).bind('contextmenu',function(e){
         return false;
     });
 
-## 22. 如何定义一个定制的选择器
+### 22. 如何定义一个定制的选择器
 
     $.expr[':'].mycustomselector = function(element, index, meta, stack){
     // element- 一个DOM元素
@@ -187,13 +186,13 @@ tags: [JavaScript, jQuery]
     // 定制选择器的用法：
     $('.someClasses:test').doSomething();
 
-## 23. 如何检查某个元素是否存在
+### 23. 如何检查某个元素是否存在
 
     if ($('#someDiv').length) {
     //万岁！！！它存在……
     }
 
-## 24. 如何使用jQuery来检测右键和左键的鼠标单击两种情况：
+### 24. 如何使用jQuery来检测右键和左键的鼠标单击两种情况：
 
     $("#someelement").live('click', function(e) {
         if( (!$.browser.msie && e.button == 0) || ($.browser.msie && e.button == 1) ) {
@@ -203,7 +202,7 @@ tags: [JavaScript, jQuery]
         }
     });
 
-## 25. 如何显示或是删除input域中的默认值
+### 25. 如何显示或是删除input域中的默认值
 
     //这段代码展示了在用户未输入值时，
     //如何在文本类型的input域中保留
@@ -224,7 +223,7 @@ tags: [JavaScript, jQuery]
 
     <input type="text" value="Enter Username here.." class="swap" />
 
-## 26. 如何在一段时间之后自动隐藏或关闭元素（支持1.4版本）：
+### 26. 如何在一段时间之后自动隐藏或关闭元素（支持1.4版本）：
 
     //这是1.3.2中我们使用setTimeout来实现的方式
     setTimeout(function() {
@@ -233,12 +232,12 @@ tags: [JavaScript, jQuery]
     //而这是在1.4中可以使用delay()这一功能来实现的方式（这很像是休眠）
     $(".mydiv").delay(5000).hide('blind', {}, 500);
 
-## 27. 如何把已创建的元素动态地添加到DOM中：
+### 27. 如何把已创建的元素动态地添加到DOM中：
 
 	var newDiv = $('');
     newDiv.attr('id','myNewDiv').appendTo('body');
 
-## 28. 如何限制“Text-Area”域中的字符的个数：
+### 28. 如何限制“Text-Area”域中的字符的个数：
 
     jQuery.fn.maxLength = function(max){
         this.each(function(){
@@ -266,7 +265,7 @@ tags: [JavaScript, jQuery]
     //用法
     $('#mytextarea').maxLength(500);
 
-## 29. 如何为函数创建一个基本的测试
+### 29. 如何为函数创建一个基本的测试
 
     //把测试单独放在模块中
     module("Module B");
@@ -278,17 +277,17 @@ tags: [JavaScript, jQuery]
         equals( true, true, "passing test" );
     });
 
-## 30. 如何在jQuery中克隆一个元素：
+### 30. 如何在jQuery中克隆一个元素：
 
 	var cloned = $('#somediv').clone();
 
-## 31. 在jQuery中如何测试某个元素是否可见
+### 31. 在jQuery中如何测试某个元素是否可见
 
     if($(element).is(':visible') == 'true') {
         //该元素是可见的
     }
 
-## 32. 如何把一个元素放在屏幕的中心位置：
+### 32. 如何把一个元素放在屏幕的中心位置：
 
     jQuery.fn.center = function () {
         this.css('position','absolute');
@@ -299,14 +298,14 @@ tags: [JavaScript, jQuery]
     //这样来使用上面的函数：
     $(element).center();
 
-## 33. 如何把有着某个特定名称的所有元素的值都放到一个数组中：
+### 33. 如何把有着某个特定名称的所有元素的值都放到一个数组中：
 
     var arrInputValues = new Array();
     $("input[name='table[]']").each(function(){
         arrInputValues.push($(this).val());
     });
 
-## 34. 如何从元素中除去html
+### 34. 如何从元素中除去html
 
     (function($) {
         $.fn.stripHtml = function() {
@@ -320,11 +319,11 @@ tags: [JavaScript, jQuery]
     //用法：
     $('p').stripHtml();
 
-## 35. 如何使用closest来取得父元素：
+### 35. 如何使用closest来取得父元素：
 
 	$('#searchBox').closest('div');
 
-## 36. 如何使用Firebug和Firefox来记录jQuery事件日志：
+### 36. 如何使用Firebug和Firefox来记录jQuery事件日志：
 
     // 允许链式日志记录
     // 用法：
@@ -336,7 +335,7 @@ tags: [JavaScript, jQuery]
         return this;
     };
 
-## 37. 如何强制在弹出窗口中打开链接：
+### 37. 如何强制在弹出窗口中打开链接：
 
     jQuery('a.popup').live('click', function(){
         newwindow=window.open($(this).attr('href'),'','height=200,width=150');
@@ -346,7 +345,7 @@ tags: [JavaScript, jQuery]
         return false;
     });
 
-## 38. 如何强制在新的选项卡中打开链接：
+### 38. 如何强制在新的选项卡中打开链接：
 
     jQuery('a.newTab').live('click', function(){
         newwindow=window.open($(this).href);
@@ -354,7 +353,7 @@ tags: [JavaScript, jQuery]
         return false;
     });
 
-## 39. 在jQuery中如何使用.siblings()来选择同辈元素
+### 39. 在jQuery中如何使用.siblings()来选择同辈元素
 
     // 不这样做
     $('#nav li').click(function(){
@@ -366,7 +365,7 @@ tags: [JavaScript, jQuery]
         $(this).addClass('active').siblings().removeClass('active');
     });
 
-## 40. 如何切换页面上的所有复选框：
+### 40. 如何切换页面上的所有复选框：
 
     var tog = false;
     // 或者为true，如果它们在加载时为被选中状态的话
@@ -375,7 +374,7 @@ tags: [JavaScript, jQuery]
         tog = !tog;
     });
 
-## 41. 如何基于一些输入文本来过滤一个元素列表：
+### 41. 如何基于一些输入文本来过滤一个元素列表：
 
     //如果元素的值和输入的文本相匹配的话
     //该元素将被返回
@@ -383,7 +382,7 @@ tags: [JavaScript, jQuery]
         return $(this).attr('value') == $('input#someId').val();
     })
 
-## 42. 如何获得鼠标垫光标位置x和y
+### 42. 如何获得鼠标垫光标位置x和y
 
     $(document).ready(function() {
         $(document).mousemove(function(e){
@@ -391,7 +390,7 @@ tags: [JavaScript, jQuery]
         });
     });
 
-## 43. 如何把整个的列表元素（List Element，LI）变成可点击的
+### 43. 如何把整个的列表元素（List Element，LI）变成可点击的
 
     $("ul li").click(function(){
       window.location=$(this).find("a").attr("href");
@@ -405,7 +404,7 @@ tags: [JavaScript, jQuery]
     <li><a href="#">Link 4</a></li>
     </ul>
 
-## 44. 如何使用jQuery来解析XML（基本的例子）：
+### 44. 如何使用jQuery来解析XML（基本的例子）：
 
 	function parseXml(xml) {
         //找到每个Tutorial并打印出author
@@ -414,13 +413,13 @@ tags: [JavaScript, jQuery]
         });
     }
 
-## 45. 如何检查图像是否已经被完全加载进来
+### 45. 如何检查图像是否已经被完全加载进来
 
     $('#theImage').attr('src', 'image.jpg').load(function() {
         alert('This Image Has Been Loaded');
     });
 
-## 46. 如何使用jQuery来为事件指定命名空间：
+### 46. 如何使用jQuery来为事件指定命名空间：
 
     //事件可以这样绑定命名空间
     $('input').bind('blur.validation', function(e){
@@ -429,7 +428,7 @@ tags: [JavaScript, jQuery]
     //data方法也接受命名空间
     $('input').data('validation.isValid', true);
 
-## 47. 如何检查cookie是否启用
+### 47. 如何检查cookie是否启用
 
     var dt = new Date();
     dt.setSeconds(dt.getSeconds() + 60);
@@ -439,13 +438,13 @@ tags: [JavaScript, jQuery]
     //没有启用cookie
     }
 
-## 48. 如何让cookie过期：
+### 48. 如何让cookie过期：
 
     var date = new Date();
     date.setTime(date.getTime() + (x * 60 * 1000));
     $.cookie('example', 'foo', { expires: date });
 
-## 49. 如何使用一个可点击的链接来替换页面中任何的URL
+### 49. 如何使用一个可点击的链接来替换页面中任何的URL
 
 
     $.fn.replaceUrl = function() {

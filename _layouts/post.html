@@ -1,34 +1,24 @@
 ---
-layout: blog
-post: true
+layout: default
 ---
 
-<header class="post-header">
-  <h1 class="post-title"><a href="{{ page.url }}">{{ page.title }}</a></h2>
-  <p class="post-meta">
-    <i class="fa fa-calendar"></i>
-    {{ page.date | date: "%Y" }}年{{ page.date | date: "%m" }}月{{ page.date | date: "%d" }}日
-    <i class="space"></i>
-    {% for item in (0..page.categories.size) %}
-    {% unless forloop.last %}<i class="fa fa-tags"></i>{% endunless %}
-    <a class="post-category" href="/page/category.html#{{ page.categories[item] }}">{{ page.categories[item] }}</a>
-    {% endfor %}
-  </p>
-</header>
-<div class="post-main">
-{{ content }}
-</div>
-{% include share.html %}
-<div class="pagination">
-{% if page.previous %}
-<a class="pagination-item newer" href="{{ BASE_PATH }}{{ page.previous.url }}"><i class="fa fa-arrow-left"></i>&nbsp;&nbsp;{{ page.previous.title }}</a>
-{% else %}
-<span class="pagination-item newer">上一篇&nbsp;<i class="fa fa-chain-broken"></i></span>
-{% endif %}
-{% if page.next %}
-<a class="pagination-item older" href="{{ BASE_PATH }}{{ page.next.url }}">{{ page.next.title }}&nbsp;&nbsp;<i class="fa fa-arrow-right"></i></a>
-{% else %}
-<span class="pagination-item older">下一篇&nbsp;<i class="fa fa-chain-broken"></i></span>
-{% endif %}
-</div>
-{% if page.duoshuo != false %}{% include duoshuo.html %}{% endif %}
+<article class="post-container post-container--single" itemscope itemtype="http://schema.org/BlogPosting">
+  <header class="post-header">
+    <h1 class="post-title">{{ page.title }}</h1>
+    <div class="post-meta">
+      <img src="/assets/images/calendar.png" width="20px"/> 
+      <time datetime="{{page.date | date: date_to_xmlschema}}" itemprop="datePublished" class="post-meta__date date">{{page.date | date: "%F"}}</time>  
+         
+      <span id="busuanzi_container_page_pv"> | 阅读：<span id="busuanzi_value_page_pv"></span>次</span>
+    </p>
+    </div>
+  </header>
+
+  <section class="post">
+    {{ content }}
+
+  </section>
+</article>
+
+{% include new-old.html %}
+{% include comments.html %}

@@ -1,7 +1,6 @@
 ---
 layout: post
 title: "Best JavaScript Books for Beginners"
-category: "JavaScript"
 tags: [JavaScript, Books]
 ---
 

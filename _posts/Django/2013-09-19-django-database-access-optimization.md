@@ -1,13 +1,13 @@
 ---
 layout: post
 title: "Django ORM 数据库访问优化"
-category: "Django"
 date: 2013-09-19
+tag: Django
 ---
 
 Django的ORM在提供了很大的便利的同时也有很多弊端，Django的官方文档专门给出了一篇文章，讲如何优化数据库访问的，文章见[这里][django document database access optimization]。之后在一个博客上看到一篇文章，大致是翻译了django的文档觉得不错，便整理了这部分内容。部分内容参考[这篇博文][refer link]。
 
-## 性能分析两个工具
+### 性能分析两个工具
 
 * django.db.connection
 

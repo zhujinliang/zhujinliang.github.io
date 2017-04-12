@@ -1,10 +1,11 @@
 ---
 layout: post
 title: "South在Django中使用"
-category: "Django"
+date: 2013-02-03
+tag: Django
 ---
 
-## South概述
+### South概述
 针对django自带的syncdb同步models和数据库的缺陷开发的数据迁移工具。
 
 South可以作为syncdb的替代，South能够检测对models的更改并同步到数据库。
@@ -13,7 +14,7 @@ South可以作为syncdb的替代，South能够检测对models的更改并同步�
 
 [South的文档](http://south.readthedocs.org/en/latest/)
 
-## South基本用法
+### South基本用法
 新建的项目使用South：
 
 1. 安装完South之后，要在django项目中使用South，先要将South作为一个App导入项目，所以在Django项目的settings.py中的`INSTALL_APP`下添加`south`。
@@ -30,7 +31,7 @@ South可以作为syncdb的替代，South能够检测对models的更改并同步�
 
 4. 已有的项目中使用South，假设一个已存在的项目（定义了models，创建了相应的数据库，保存了响应的数据），这时想要使用South替代原来的syncdb，只需要一些简单的步骤：
 
-* 先在`INSTALL_APP`里面添加south
+* 先在`INSTALL_APP`里面添加south  
 * 然后执行以下命令 `convert_to_south`：
 
         python manage.py syncdb      # syncdb已经被South更改，用来创建south_migrationhistory表  
@@ -39,7 +40,7 @@ South可以作为syncdb的替代，South能够检测对models的更改并同步�
 
 <!-- more -->
 
-## South进阶
+### South进阶
 
 当多人开发项目时，可能另一个人在他自己的数据库上执行了migration，之后又migrate更新到了数据库中，此时会出现migration文件目录下的不一致，此时自己更改了models.py之后，执行migration，产生了migration文件，但当你执行migrate想更新数据库时，会报错，可能的原因是migration文件与数据库中south_migrationhistory的不一致造成的。
 

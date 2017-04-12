@@ -1,15 +1,15 @@
 ---
 layout: post
 title: "Django Form验证"
-category: "Django"
 date: 2013-11-02
+tag: Django
 ---
 
 
 Django框架提供了一个forms类，来处理web开发中的表单相关事项。众所周知，form最常做的是对用户输入的内容进行验证，
 为此Django的forms类提供了全面的内容验证支持。熟悉之后，使用Django的Form做表单验证，非常方便。
 
-## 完整的Form验证过程
+### 完整的Form验证过程
 
 一个完整的form验证过程如下：
 
@@ -25,7 +25,7 @@ Django框架提供了一个forms类，来处理web开发中的表单相关事项
 
 <!-- more -->
 
-## 验证：
+### 验证：
 分为多个层次,检测失败会返回 ValidationError
 
         to_python() 　　　　[forms.Field] 转换成python的类型 使用范例

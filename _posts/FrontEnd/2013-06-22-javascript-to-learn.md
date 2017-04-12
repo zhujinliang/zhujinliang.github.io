@@ -2,13 +2,12 @@
 layout: post
 title: "JavaScript To Learn"
 description: "JavaScript To Learn"
-category: "JavaScript"
-tags: [JavaScript]
+tag: [JavaScript]
 ---
 
 
 
-## Basic
+### Basic
 
 * [resources to learn javascript][1]
 
@@ -22,7 +21,7 @@ tags: [JavaScript]
 
 * [WebSocket][6]- Like TCP, WebSocket provides for bi-directional, full-duplex communication between web browsers and web servers.
 
-## Backend
+### Backend
 
 * [NodeJS][7]- for easily building fast, scalable network applications
 
@@ -37,7 +36,7 @@ tags: [JavaScript]
 * [Cube][12]- Time Series Data Collection and Analysis
 
 <!-- more -->
-## Frontend
+### Frontend
 
 * [JQuery][13]- a fast and concise JavaScript Library that simplifies HTML document traversing, event handling, animating, and Ajax interactions for rapid web development
 
